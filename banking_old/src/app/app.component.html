@@ -1,0 +1,19 @@
+<p-button label="Ajouter une voiture" icon="pi pi-plus" (click)="addCar()"></p-button>
+
+<p-table [value]="cars">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-car>
+    <tr>
+      <td>{{ car.make }}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.year }}</td>
+    </tr>
+  </ng-template>
+</p-table>
