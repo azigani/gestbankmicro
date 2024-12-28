@@ -4,9 +4,12 @@ import com.alponse.backendbank.dao.RoleDao;
 import com.alponse.backendbank.entities.Role;
 import com.alponse.backendbank.services.IRoleService;
 import org.springframework.data.util.Streamable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
+@Service
 
 public class RoleServicesImpl implements IRoleService {
 
@@ -32,6 +35,11 @@ public class RoleServicesImpl implements IRoleService {
          * plus flexible ou performante avec les API de flux.
          */
         return Streamable.of(roleDao.findAll()).toList();
+    }
+
+    @Override
+    public Optional<Role> findByCode(String code) {
+        return roleDao.findByCode(code);
     }
 
 

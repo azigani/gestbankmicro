@@ -1,5 +1,6 @@
 package com.alponse.backendbank;
 
+import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BackendbankApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendbankApplication.class, args);
+		//ApplicationContext context =
+				SpringApplication.run(BackendbankApplication.class, args);
 	}
 
 }

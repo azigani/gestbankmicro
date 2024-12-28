@@ -10,4 +10,5 @@ public interface IRoleService  {
     Role save(Role role);
     Optional<Role> findById(Long id);
      List<Role> listeRoles();
+    Optional<Role> findByCode(String code);
 }
