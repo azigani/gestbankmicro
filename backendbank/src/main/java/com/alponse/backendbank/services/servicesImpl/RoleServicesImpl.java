@@ -3,6 +3,7 @@ package com.alponse.backendbank.services.servicesImpl;
 import com.alponse.backendbank.dao.RoleDao;
 import com.alponse.backendbank.entities.Role;
 import com.alponse.backendbank.services.IRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-
 public class RoleServicesImpl implements IRoleService {
-
-     private RoleDao roleDao;
+    @Autowired
+    private RoleDao roleDao;
 
     @Override
     public Role save(Role role) {
